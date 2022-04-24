@@ -42,10 +42,16 @@ const routes: Array<IBaseRouter> = [
     component: () => import("../views/Login.vue"),
   },
   {
-    path: "/home",
-    name: "home",
+    path: "/qiankunVue/*",
+    name: "qiankunVue",
+    hidden: true,
     component: Layout,
-    redirect: "/home/index",
+  },
+  {
+    path: "/qiankunVue/home",
+    name: "home",
+    //component: Layout,
+    redirect: "/qiankunVue/home/index",
     meta: {
       title: "首页",
       icon: "el-icon-s-home",
@@ -55,7 +61,7 @@ const routes: Array<IBaseRouter> = [
         path: "index",
         name: "index",
         hidden: true,
-        component: () => import("../views/Home.vue"),
+        // component: () => import("../views/Home.vue"),
         meta: {
           title: "首页",
           breadcrumb: false,
@@ -66,7 +72,7 @@ const routes: Array<IBaseRouter> = [
         name: "bar",
         props: true,
         hidden: true,
-        component: () => import("@/components/echarts/Bar.vue"),
+        // component: () => import("@/components/echarts/Bar.vue"),
         meta: {
           title: "柱状图",
           activeMenu: "/home/index",
@@ -77,7 +83,7 @@ const routes: Array<IBaseRouter> = [
         name: "pie",
         props: true,
         hidden: true,
-        component: () => import("@/components/echarts/Pie.vue"),
+        // component: () => import("@/components/echarts/Pie.vue"),
         meta: {
           title: "饼图",
           activeMenu: "/home/index",
@@ -88,7 +94,7 @@ const routes: Array<IBaseRouter> = [
         name: "line",
         props: true,
         hidden: true,
-        component: () => import("@/components/echarts/Line.vue"),
+        // component: () => import("@/components/echarts/Line.vue"),
         meta: {
           title: "折线图",
           activeMenu: "/home/index",
@@ -97,10 +103,10 @@ const routes: Array<IBaseRouter> = [
     ],
   },
   {
-    path: "/icon",
+    path: "/qiankunVue/icon",
     name: "icon",
     component: Layout,
-    redirect: "/icon/iconfont",
+    redirect: "/qiankunVue/icon/iconfont",
     meta: {
       title: "图标",
       icon: "el-icon-s-flag",
@@ -109,7 +115,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "iconfont",
         name: "iconfont",
-        component: () => import("../views/icon/IconFont.vue"),
+        // component: () => import("../views/icon/IconFont.vue"),
         hidden: true,
         meta: {
           title: "阿里图库",
@@ -119,10 +125,10 @@ const routes: Array<IBaseRouter> = [
     ],
   },
   {
-    path: "/mode",
+    path: "/qiankunVue/mode",
     name: "mode",
-    component: Layout,
-    redirect: "/mode/modeEnv",
+    // component: Layout,
+    redirect: "/qiankunVue/mode/modeEnv",
     meta: {
       title: "模式和环境变量",
       icon: "el-icon-s-help",
@@ -131,7 +137,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "modeEnv",
         name: "modeEnv",
-        component: () => import("../views/mode/index.vue"),
+        // component: () => import("../views/mode/index.vue"),
         hidden: true,
         meta: {
           title: "环境变量",
@@ -141,10 +147,10 @@ const routes: Array<IBaseRouter> = [
     ],
   },
   {
-    path: "/auth",
+    path: "/qiankunVue/auth",
     name: "auth",
-    component: Layout,
-    redirect: "/auth/authPage",
+    // component: Layout,
+    redirect: "/qiankunVue/auth/authPage",
     meta: {
       title: "权限",
       icon: "el-icon-s-check",
@@ -153,7 +159,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "authPage",
         name: "authPage",
-        component: () => import("../views/auth/authPage.vue"),
+        // component: () => import("../views/auth/authPage.vue"),
         meta: {
           title: "权限演示菜单",
           auth: "authPage",
@@ -162,7 +168,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "authDirective",
         name: "authDirective",
-        component: () => import("../views/auth/authDirective.vue"),
+        // component: () => import("../views/auth/authDirective.vue"),
         meta: {
           title: "权限演示指令",
         },
@@ -170,10 +176,10 @@ const routes: Array<IBaseRouter> = [
     ],
   },
   {
-    path: "/table",
+    path: "/qiankunVue/table",
     name: "table",
-    component: Layout,
-    redirect: "/table/basic",
+    // component: Layout,
+    redirect: "/qiankunVue/table/basic",
     meta: {
       title: "表格",
       icon: "el-icon-s-grid",
@@ -182,7 +188,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "basic",
         name: "basic",
-        component: () => import("../views/table/BasicTable.vue"),
+        // component: () => import("../views/table/BasicTable.vue"),
         meta: {
           title: "基础表格",
         },
@@ -190,10 +196,10 @@ const routes: Array<IBaseRouter> = [
     ],
   },
   {
-    path: "/form",
+    path: "/qiankunVue/form",
     name: "form",
-    component: Layout,
-    redirect: "/form/basicForm",
+    // component: Layout,
+    redirect: "/qiankunVue/form/basicForm",
     meta: {
       title: "表单",
       icon: "el-icon-tickets",
@@ -202,7 +208,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "basicForm",
         name: "basicForm",
-        component: () => import("../views/form/BasicForm.vue"),
+        // component: () => import("../views/form/BasicForm.vue"),
         meta: {
           title: "基础表单",
         },
@@ -210,10 +216,10 @@ const routes: Array<IBaseRouter> = [
     ],
   },
   {
-    path: "/animation",
+    path: "/qiankunVue/animation",
     name: "animation",
-    component: Layout,
-    redirect: "/animation/element",
+    // component: Layout,
+    redirect: "/qiankunVue/animation/element",
     meta: {
       title: "动画",
       icon: "el-icon-data-line",
@@ -222,7 +228,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "element",
         name: "element",
-        component: () => import("../views/animation/Element.vue"),
+        // component: () => import("../views/animation/Element.vue"),
         meta: {
           title: "element",
         },
@@ -230,7 +236,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "animate",
         name: "animate",
-        component: () => import("../views/animation/Animate.vue"),
+        // component: () => import("../views/animation/Animate.vue"),
         meta: {
           title: "animate",
         },
@@ -277,10 +283,10 @@ const routes: Array<IBaseRouter> = [
     ],
   },
   {
-    path: "/lodash",
+    path: "/qiankunVue/lodash",
     name: "lodash",
-    component: Layout,
-    redirect: "/lodash/debounceAndThrottle",
+    // component: Layout,
+    redirect: "/qiankunVue/lodash/debounceAndThrottle",
     meta: {
       title: "Lodash",
       icon: "el-icon-notebook-2",
@@ -289,7 +295,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "debounceAndThrottle",
         name: "debounceAndThrottle",
-        component: () => import("../views/lodash/DebounceAndThrottle.vue"),
+        // component: () => import("../views/lodash/DebounceAndThrottle.vue"),
         meta: {
           title: "防抖&节流",
         },
@@ -297,10 +303,10 @@ const routes: Array<IBaseRouter> = [
     ],
   },
   {
-    path: "/router",
+    path: "/qiankunVue/router",
     name: "router",
-    component: Layout,
-    redirect: "/router/sub1",
+    // component: Layout,
+    redirect: "/qiankunVue/router/sub1",
     meta: {
       title: "路由嵌套",
       icon: "el-icon-s-operation",
@@ -309,8 +315,8 @@ const routes: Array<IBaseRouter> = [
       {
         path: "sub1",
         name: "sub1",
-        component: () => import("../views/router/Sub1.vue"),
-        redirect: "/router/sub1/sub1-1",
+        // component: () => import("../views/router/Sub1.vue"),
+        redirect: "/qiankunVue/router/sub1/sub1-1",
         meta: {
           title: "sub1",
         },
@@ -318,8 +324,8 @@ const routes: Array<IBaseRouter> = [
           {
             path: "sub1-1",
             name: "sub1-1",
-            component: () => import("../views/router/Sub1-1.vue"),
-            redirect: "/router/sub1/sub1-1/sub1-1-1",
+            // component: () => import("../views/router/Sub1-1.vue"),
+            redirect: "/qiankunVue/router/sub1/sub1-1/sub1-1-1",
             meta: {
               title: "sub1-1",
             },
@@ -327,7 +333,7 @@ const routes: Array<IBaseRouter> = [
               {
                 path: "sub1-1-1",
                 name: "sub1-1-1",
-                component: () => import("../views/router/Sub1-1-1.vue"),
+                // component: () => import("../views/router/Sub1-1-1.vue"),
                 meta: {
                   title: "sub1-1-1",
                 },
@@ -335,7 +341,7 @@ const routes: Array<IBaseRouter> = [
               {
                 path: "sub1-1-2",
                 name: "sub1-1-2",
-                component: () => import("../views/router/Sub1-1-2.vue"),
+                // component: () => import("../views/router/Sub1-1-2.vue"),
                 meta: {
                   title: "sub1-1-2",
                 },
@@ -345,7 +351,7 @@ const routes: Array<IBaseRouter> = [
           {
             path: "sub1-2",
             name: "sub1-2",
-            component: () => import("../views/router/Sub1-2.vue"),
+            // component: () => import("../views/router/Sub1-2.vue"),
             meta: {
               title: "sub1-2",
             },
@@ -355,7 +361,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "sub2",
         name: "sub2",
-        component: () => import("../views/router/Sub2.vue"),
+        // component: () => import("../views/router/Sub2.vue"),
         meta: {
           title: "sub2",
         },
@@ -363,10 +369,10 @@ const routes: Array<IBaseRouter> = [
     ],
   },
   {
-    path: "/component",
+    path: "/qiankunVue/component",
     name: "component",
-    component: Layout,
-    redirect: "/component/editor",
+    // component: Layout,
+    redirect: "/qiankunVue/component/editor",
     meta: {
       title: "组件",
       icon: "el-icon-s-opportunity",
@@ -375,7 +381,7 @@ const routes: Array<IBaseRouter> = [
       {
         path: "editor",
         name: "editor",
-        component: () => import("../views/component/EditorPage.vue"),
+        // component: () => import("../views/component/EditorPage.vue"),
         meta: {
           title: "富文本",
         },

@@ -30,6 +30,7 @@
     "echarts": "^5.3.0",
     "element-ui": "^2.15.1",
     "js-cookie": "^3.0.1",
+    "qiankun": "^2.7.0",
     "timeago.js": "^4.0.2",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",

@@ -31,7 +31,10 @@
             </el-breadcrumb-item>
           </template>
         </el-breadcrumb>
+        <!-- 本身的路由加载 -->
         <router-view style="margin-top: 20px" />
+        <!-- 子应用加载容器 -->
+        <div id="qiankunVue" style="width: 100%; height: 100%" />
       </el-main>
     </el-container>
   </el-container>
@@ -41,6 +44,7 @@
 import { Vue, Component } from "vue-property-decorator";
 import Header from "./Header.vue";
 import Menu from "./Menu.vue";
+import { start } from "qiankun";
 // import { IBaseRouter } from "@/router/config";
 @Component({
   name: "Layout",
@@ -55,6 +59,12 @@ export default class Layout extends Vue {
     return this.$route.matched?.filter(
       (v) => v.meta?.title && v?.meta?.breadcrumb !== false
     );
+  }
+  mounted() {
+    if (!(window as any).qiankunStarted) {
+      (window as any).qiankunStarted = true;
+      start();
+    }
   }
 }
 </script>

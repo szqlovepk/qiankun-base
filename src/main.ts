@@ -8,6 +8,8 @@ import "./index.less";
 import * as echarts from "echarts";
 import Cookies from "js-cookie";
 import myPlugin from "@/plugins";
+import { registerMicroApps } from "qiankun";
+
 // import locale from "element-ui/lib/locale/lang/en";
 
 // 国际化设置
@@ -17,6 +19,17 @@ Vue.use(myPlugin);
 Vue.prototype.$echarts = echarts;
 Vue.prototype.$Cookies = Cookies;
 Vue.config.productionTip = false;
+
+registerMicroApps([
+  {
+    name: "qiankunVue",
+    entry: "//localhost:8080",
+    container: "#qiankunVue",
+    activeRule: "/qiankunVue",
+  },
+]);
+// 启动 qiankun
+//start();
 
 const vm = new Vue({
   router,
