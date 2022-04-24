@@ -1,5 +1,5 @@
 {
-  "name": "vue-admin",
+  "name": "qiankun-base",
   "version": "0.1.0",
   "private": true,
   "author": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/szqlovepk/vue-admin"
+    "url": "https://github.com/szqlovepk/qiankun-base.git"
   },
   "scripts": {
     "serve": "vue-cli-service serve --port 80 --open",
